@@ -32,19 +32,19 @@ Not every "free" label means the same thing. This directory separates them:
 | Metric | Value |
 | --- | --- |
 | Providers in catalog | 14 |
-| Providers with verified offerings | 11 |
-| Model offerings | 24 |
+| Providers with verified offerings | 9 |
+| Model offerings | 19 |
 | Permanent free | 8 |
 | Renewable quota | 7 |
-| Aggregator free | 5 |
-| Trial / credits | 4 |
+| Aggregator free | 1 |
+| Trial / credits | 3 |
 | Community free | 0 |
 | Requires credit card | 0 |
 | Requires phone verification | 2 |
-| Requires an account | 24 (all official key links) |
+| Requires an account | 19 (all official key links) |
 | Geographic restrictions | not tracked in this dataset |
 | Rows marked VERIFIED_LIVE | 9 |
-| Rows marked DOCUMENTED_FREE | 15 |
+| Rows marked DOCUMENTED_FREE | 10 |
 | lastVerified range | 2026-09-26 → 2026-09-26 |
 <!-- /GEN:STATS -->
 
@@ -59,16 +59,16 @@ Provider-level rate limits are the provider's own published summary (they can di
 | Groq | Permanent Free | 4 | 30 RPM, 14,400 req/day | [Get key](https://console.groq.com/keys) | [Docs](https://console.groq.com/docs) |
 | SambaNova Systems | Permanent Free | 1 | ~20 RPM, 200 RPD daily quota | [Get key](https://www.sambanova.ai/) | [Docs](https://docs.sambanova.ai/) |
 | Cerebras | Permanent Free | 2 | 30 RPM, 1M tokens/day | [Get key](https://cloud.cerebras.ai/) | [Docs](https://docs.cerebras.ai/) |
-| NVIDIA NIM | Trial Credits | 1 | 1,000 promotional API credits for developers | [Get key](https://build.nvidia.com/) | [Docs](https://docs.nvidia.com/nim/) |
-| Mistral AI | Quota Limits | 2 | 1 RPS (60 RPM), phone verification required | [Get key](https://platform.mistral.ai/) | [Docs](https://docs.mistral.ai/platform/) |
+| NVIDIA NIM | Trial Credits | 0 | 1,000 promotional API credits for developers | [Get key](https://build.nvidia.com/) | [Docs](https://docs.nvidia.com/nim/) |
+| Mistral AI | Quota Limits | 2 | 1 RPS (60 RPM), phone verification required | [Get key](https://console.mistral.ai/api-keys) | [Docs](https://docs.mistral.ai/) |
 | Cloudflare Workers AI | Permanent Free | 2 | 10,000 neurons/day free allocation | [Get key](https://dash.cloudflare.com/?to=/:account/workers-ai) | [Docs](https://developers.cloudflare.com/workers-ai/) |
-| OpenRouter | Free Aggregator | 3 | 3 RPM, no credit card required for :free models | [Get key](https://openrouter.ai/keys) | [Docs](https://openrouter.ai/docs) |
-| Hugging Face | Community Free | 2 | 1,000 requests/day via Inference API (serverless) | [Get key](https://huggingface.co/settings/tokens) | [Docs](https://huggingface.co/docs/huggingface.js/guides/inference) |
-| GitHub Models | Trial Credits | 3 | GitHub account required; Copilot limits apply | [Get key](https://github.com/features) | [Docs](https://docs.github.com/en/models) |
-| Kilo Code / Kilo Gateway | Free Aggregator | 2 | Developer trial quota; varies by model | [Get key](https://kilo.code/) | [Docs](https://kilo.code/) |
+| OpenRouter | Free Aggregator | 0 | 3 RPM, no credit card required for :free models | [Get key](https://openrouter.ai/keys) | [Docs](https://openrouter.ai/docs) |
+| Hugging Face | Community Free | 2 | 1,000 requests/day via Inference API (serverless) | [Get key](https://huggingface.co/settings/tokens) | [Docs](https://huggingface.co/docs/api-inference/) |
+| GitHub Models | Trial Credits | 3 | GitHub account required; Copilot limits apply | [Get key](https://github.com/features) | [Docs](https://docs.github.com/en/github-models) |
+| Kilo Code / Kilo Gateway | Free Aggregator | 1 | Developer trial quota; varies by model | [Get key](https://kilo.ai/) | [Docs](https://docs.kilo.ai/) |
 | Chutes.ai | Community Free | 0 | Free tier with rate limits | [Get key](https://chutes.ai/) | [Docs](https://docs.chutes.ai/) |
 | ModelScope | Community Free | 0 | Free tier with rate limits | [Get key](https://modelscope.cn/) | [Docs](https://modelscope.cn/) |
-| OVHcloud AI Endpoints | Community Free | 0 | Free tier with rate limits | [Get key](https://www.ovhcloud.com/public-cloud/ai-endpoints/) | [Docs](https://docs.ovhcloud.com/en/public-cloud/ai-endpoints/) |
+| OVHcloud AI Endpoints | Community Free | 0 | Free tier with rate limits | [Get key](https://www.ovhcloud.com/en/public-cloud/ai-endpoints/) | [Docs](https://docs.ovhcloud.com/en/public-cloud/ai-endpoints/) |
 <!-- /GEN:PROVIDERS -->
 
 ## Model offerings
@@ -86,22 +86,17 @@ Rate limits are shown exactly as recorded in the source dataset (`rateLimits.doc
 | Groq | Qwen 2.5 72B | Permanent free | 30 RPM, 14,400 requests/day via Groq Console | 128K | openai | 2026-09-26 |
 | Mistral AI | Mistral NeMo 12B | Renewable quota | 1 RPS (60 RPM), phone verification required via La Plateforme | 128K | openai | 2026-09-26 |
 | Mistral AI | Codestral 22B | Renewable quota | 1 RPS (60 RPM), phone verification required via La Plateforme | 128K | openai | 2026-09-26 |
-| OpenRouter | Meta Llama 3.3 70B † | Aggregator free | 3 RPM, no credit card required for :free models | 128K | openai | 2026-09-26 |
-| OpenRouter | Qwen 2.5 72B † | Aggregator free | 3 RPM, no credit card required for :free models | 128K | openai | 2026-09-26 |
-| OpenRouter | Meta Llama 3.1 8B † | Aggregator free | 3 RPM, no credit card required for :free models | 128K | openai | 2026-09-26 |
 | Hugging Face | Llama 3.1 8B Instruct | Renewable quota | 1,000 requests/day via Inference API (serverless) | 128K | openai | 2026-09-26 |
 | Hugging Face | Llama 3.3 70B Instruct | Renewable quota | 500 requests/day via Inference API (serverless, rate-limited) | 128K | openai | 2026-09-26 |
 | Cloudflare Workers AI | Llama 3.3 70B | Renewable quota | 10,000 neurons/day free allocation | 128K | openai | 2026-09-26 |
 | Cloudflare Workers AI | Llama 3.1 8B | Renewable quota | 10,000 neurons/day free allocation | 128K | openai | 2026-09-26 |
 | SambaNova Systems | Llama 3.3 70B | Renewable quota | ~20 RPM / 200 RPD daily free quota via SN40L RDUs, sub-second latency | 128K | openai | 2026-09-26 |
-| NVIDIA NIM | Llama 3.3 70B † | Trial / credits | 1,000 free promotional API credits for developers; standard rate limits apply after trial | 128K | openai | 2026-09-26 |
 | Cerebras | Llama 3.3 70B | Permanent free | 30 RPM, 1M tokens/day via Cerebras Inference API | 128K | openai | 2026-09-26 |
 | Cerebras | Llama 3.1 8B | Permanent free | 30 RPM, 1M tokens/day via Cerebras Inference API | 128K | openai | 2026-09-26 |
 | GitHub Models | GPT-4o mini | Trial / credits | GitHub account required; Copilot limits apply (15 RPM, 150 RPD) | 128K | openai | 2026-09-26 |
 | GitHub Models | Llama 3.3 70B | Trial / credits | GitHub account required; Copilot limits apply (15 RPM, 150 RPD) | 128K | openai | 2026-09-26 |
 | GitHub Models | Phi-4 (14B) | Trial / credits | GitHub account required; Copilot limits apply (15 RPM, 150 RPD) | 128K | openai | 2026-09-26 |
 | Kilo Code | Qwen 2.5 Coder 32B | Aggregator free | Developer trial quota; varies by model | 128K | openai | 2026-09-26 |
-| Kilo Code | DeepSeek Coder V2 (Distill Qwen 32B) † | Aggregator free | Developer trial quota; varies by model | 128K | openai | 2026-09-26 |
 <!-- /GEN:OFFERINGS -->
 
 ## Sign-up requirements
@@ -128,8 +123,8 @@ Every offering row carries:
 <!-- GEN:VALIDATION -->
 Live checks run **2026-10-09** (report: `validation/2026-10-09.json`).
 
-- Official docs/signup URLs: 18 reachable, 1 bot-protected (host alive), 4 returned errors, 3 unreachable from the checker.
-- Unauthenticated catalog checks: 1 offering(s) confirmed listed, **5 not found** (flagged † in the offerings table), 18 not checkable without a key.
+- Official docs/signup URLs: 24 reachable, 2 bot-protected (host alive), 0 returned errors, 1 unreachable from the checker.
+- Unauthenticated catalog checks: 1 offering(s) confirmed listed, **0 not found** (flagged † in the offerings table), 18 not checkable without a key.
 
 Catalog results by provider:
 
@@ -138,14 +133,12 @@ Catalog results by provider:
 | Google AI Studio | not checked — API key required |
 | Groq | not checked — API key required |
 | Mistral AI | not checked — API key required |
-| OpenRouter | checked — 469 live models (exact match) |
 | Hugging Face | not checked — API key required |
 | Cloudflare Workers AI | not checked — API key required |
 | SambaNova Systems | not checked — API key required |
-| NVIDIA NIM | checked — 80 live models (exact match) |
 | Cerebras | not checked — API key required |
 | GitHub Models | not checked — API key required |
-| Kilo Code / Kilo Gateway | checked — 401 live models (contains match) |
+| Kilo Code / Kilo Gateway | checked — 390 live models (contains match) |
 <!-- /GEN:VALIDATION -->
 
 **Known limitations of this dataset** (stated so you don't have to assume them):

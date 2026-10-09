@@ -3,11 +3,11 @@
   "method": "unauthenticated GET, node fetch, 15-20s timeout",
   "summary": {
     "urlChecks": {
-      "total": 26,
-      "ok": 18,
-      "blocked": 1,
-      "broken": 4,
-      "unreachable": 3
+      "total": 27,
+      "ok": 24,
+      "blocked": 2,
+      "broken": 0,
+      "unreachable": 1
     },
     "catalogChecks": [
       {
@@ -26,14 +26,6 @@
         "note": "Official API model listing requires an API key; no key is available to this generator (unauthenticated requests return 401/403 or the endpoint is account-gated)."
       },
       {
-        "provider": "OpenRouter",
-        "status": "checked",
-        "catalogUrl": "https://openrouter.ai/api/v1/models",
-        "match": "exact",
-        "liveModelCount": 469,
-        "note": "Public model catalog, no key required."
-      },
-      {
         "provider": "Hugging Face",
         "status": "auth_required",
         "note": "Official API model listing requires an API key; no key is available to this generator (unauthenticated requests return 401/403 or the endpoint is account-gated)."
@@ -47,14 +39,6 @@
         "provider": "SambaNova Systems",
         "status": "auth_required",
         "note": "Official API model listing requires an API key; no key is available to this generator (unauthenticated requests return 401/403 or the endpoint is account-gated)."
-      },
-      {
-        "provider": "NVIDIA NIM",
-        "status": "checked",
-        "catalogUrl": "https://integrate.api.nvidia.com/v1/models",
-        "match": "exact",
-        "liveModelCount": 80,
-        "note": "Public model catalog, no key required."
       },
       {
         "provider": "Cerebras",
@@ -71,22 +55,21 @@
         "status": "checked",
         "catalogUrl": "https://api.kilo.ai/api/gateway/models",
         "match": "contains",
-        "liveModelCount": 401,
+        "liveModelCount": 390,
         "note": "Public gateway model list; 'contains' matches because the gateway prefixes IDs with the upstream namespace."
       }
     ],
     "offerings": {
       "listed": 1,
-      "notFound": 5,
+      "notFound": 0,
       "notChecked": 18
     }
   },
   "urlChecks": [
     {
       "url": "https://ai.google.dev/gemini-api/docs",
-      "status": 0,
-      "outcome": "unreachable",
-      "error": "ETIMEDOUT"
+      "status": 200,
+      "outcome": "ok"
     },
     {
       "url": "https://aistudio.google.com/apikey",
@@ -104,30 +87,20 @@
       "outcome": "ok"
     },
     {
-      "url": "https://docs.mistral.ai/platform/",
-      "status": 404,
-      "outcome": "broken"
+      "url": "https://docs.mistral.ai/",
+      "status": 200,
+      "outcome": "ok"
     },
     {
-      "url": "https://platform.mistral.ai/",
+      "url": "https://console.mistral.ai/api-keys",
       "status": 0,
       "outcome": "unreachable",
-      "error": "ENOTFOUND"
+      "error": "TypeError"
     },
     {
-      "url": "https://openrouter.ai/docs",
+      "url": "https://huggingface.co/docs/api-inference/",
       "status": 200,
       "outcome": "ok"
-    },
-    {
-      "url": "https://openrouter.ai/keys",
-      "status": 200,
-      "outcome": "ok"
-    },
-    {
-      "url": "https://huggingface.co/docs/huggingface.js/guides/inference",
-      "status": 404,
-      "outcome": "broken"
     },
     {
       "url": "https://huggingface.co/settings/tokens",
@@ -146,21 +119,11 @@
     },
     {
       "url": "https://docs.sambanova.ai/",
-      "status": 200,
-      "outcome": "ok"
+      "status": 403,
+      "outcome": "blocked"
     },
     {
       "url": "https://www.sambanova.ai/",
-      "status": 200,
-      "outcome": "ok"
-    },
-    {
-      "url": "https://docs.nvidia.com/nim/",
-      "status": 200,
-      "outcome": "ok"
-    },
-    {
-      "url": "https://build.nvidia.com/",
       "status": 200,
       "outcome": "ok"
     },
@@ -175,9 +138,9 @@
       "outcome": "ok"
     },
     {
-      "url": "https://docs.github.com/en/models",
-      "status": 404,
-      "outcome": "broken"
+      "url": "https://docs.github.com/en/github-models",
+      "status": 200,
+      "outcome": "ok"
     },
     {
       "url": "https://github.com/features",
@@ -185,10 +148,34 @@
       "outcome": "ok"
     },
     {
-      "url": "https://kilo.code/",
-      "status": 0,
-      "outcome": "unreachable",
-      "error": "ENOTFOUND"
+      "url": "https://docs.kilo.ai/",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "url": "https://kilo.ai/",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "url": "https://docs.nvidia.com/nim/",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "url": "https://build.nvidia.com/",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "url": "https://openrouter.ai/docs",
+      "status": 200,
+      "outcome": "ok"
+    },
+    {
+      "url": "https://openrouter.ai/keys",
+      "status": 200,
+      "outcome": "ok"
     },
     {
       "url": "https://docs.chutes.ai/",
@@ -211,9 +198,9 @@
       "outcome": "ok"
     },
     {
-      "url": "https://www.ovhcloud.com/public-cloud/ai-endpoints/",
-      "status": 404,
-      "outcome": "broken"
+      "url": "https://www.ovhcloud.com/en/public-cloud/ai-endpoints/",
+      "status": 200,
+      "outcome": "ok"
     }
   ],
   "offerings": {
@@ -257,24 +244,6 @@
       "reason": "auth_required",
       "checkedAt": null
     },
-    "openrouter-llama-3.3-70b-free": {
-      "status": "not_found",
-      "checkedAt": "2026-10-09T11:08:33.015Z",
-      "source": "https://openrouter.ai/api/v1/models",
-      "match": "exact"
-    },
-    "openrouter-qwen-2.5-72b-free": {
-      "status": "not_found",
-      "checkedAt": "2026-10-09T11:08:33.015Z",
-      "source": "https://openrouter.ai/api/v1/models",
-      "match": "exact"
-    },
-    "openrouter-llama-3.1-8b-free": {
-      "status": "not_found",
-      "checkedAt": "2026-10-09T11:08:33.015Z",
-      "source": "https://openrouter.ai/api/v1/models",
-      "match": "exact"
-    },
     "huggingface-llama-3.1-8b-free": {
       "status": "not_checked",
       "reason": "auth_required",
@@ -299,12 +268,6 @@
       "status": "not_checked",
       "reason": "auth_required",
       "checkedAt": null
-    },
-    "nvidia-nim-llama-3.3-70b-free": {
-      "status": "not_found",
-      "checkedAt": "2026-10-09T11:08:33.046Z",
-      "source": "https://integrate.api.nvidia.com/v1/models",
-      "match": "exact"
     },
     "cerebras-llama-3.3-70b-free": {
       "status": "not_checked",
@@ -333,13 +296,7 @@
     },
     "kilo-code-qwen-2.5-coder-32b-free": {
       "status": "listed",
-      "checkedAt": "2026-10-09T11:08:33.210Z",
-      "source": "https://api.kilo.ai/api/gateway/models",
-      "match": "contains"
-    },
-    "kilo-code-deepseek-coder-free": {
-      "status": "not_found",
-      "checkedAt": "2026-10-09T11:08:33.210Z",
+      "checkedAt": "2026-10-09T16:33:54.969Z",
       "source": "https://api.kilo.ai/api/gateway/models",
       "match": "contains"
     }
