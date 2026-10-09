@@ -1,0 +1,1658 @@
+{
+  "meta": {
+    "schemaVersion": "1.0.0",
+    "generatedAt": "2026-10-09T11:08:45.036Z",
+    "generatedBy": "scripts/generate.mjs",
+    "siteDirectory": "https://opengpuradar.com/free-llm-apis",
+    "siteDataset": "https://opengpuradar.com/data/free-offerings.json",
+    "sourceFiles": {
+      "free-offerings.json": "sha256:ddf1d702146746ccd1ea42322334b8db28966b7ed573aadbdb4a36936efca908",
+      "free-providers.json": "sha256:c8064b83a3401e1cab7bb66aa2f537fb4c159e4e751feffb35967f4d76c87444"
+    }
+  },
+  "taxonomy": [
+    {
+      "id": "permanent-free",
+      "label": "Permanent free",
+      "definition": "Access that does not expire, within published recurring rate limits. No credits to burn down.",
+      "sourceValues": [
+        "PERMANENT_FREE"
+      ]
+    },
+    {
+      "id": "renewable-quota",
+      "label": "Renewable quota",
+      "definition": "Free access subject to recurring limits (rate limits and/or daily allowances) that reset. Renewable, not one-time.",
+      "sourceValues": [
+        "FREE_TIER"
+      ]
+    },
+    {
+      "id": "aggregator-free",
+      "label": "Aggregator free",
+      "definition": "Free model routes offered by an aggregator platform, not by the model developer directly.",
+      "sourceValues": [
+        "FREE_AGGREGATOR",
+        "AGGREGATOR_FREE"
+      ]
+    },
+    {
+      "id": "trial-credits",
+      "label": "Trial / credits",
+      "definition": "Time-bound or credit-bound trial access. Ends when the trial window or promotional credits are exhausted.",
+      "sourceValues": [
+        "TRIAL",
+        "FREE_CREDIT",
+        "TEMPORARY_PREVIEW"
+      ]
+    },
+    {
+      "id": "community-free",
+      "label": "Community free",
+      "definition": "Community- or platform-sponsored free access governed by the hosting platform.",
+      "sourceValues": [
+        "COMMUNITY_FREE"
+      ]
+    },
+    {
+      "id": "card-required",
+      "label": "Requires card",
+      "definition": "Free only behind a payment method on file (e.g. trial auto-renewal).",
+      "sourceValues": [
+        "FREE_WITH_CARD"
+      ]
+    },
+    {
+      "id": "unclassified",
+      "label": "Unclassified",
+      "definition": "Recorded but not yet classified.",
+      "sourceValues": [
+        "UNKNOWN"
+      ]
+    }
+  ],
+  "coverage": {
+    "geographicRestrictions": "not-tracked",
+    "localSelfHosted": "not-part-of-api-directory",
+    "creditCardRequired": "excluded-from-listing",
+    "note": "Fields are present only where verified. Geographic restrictions and local/self-hosted options are not part of this dataset."
+  },
+  "stats": {
+    "providerCatalogCount": 14,
+    "providersWithOfferings": 11,
+    "offeringCount": 24,
+    "byCategory": {
+      "permanent-free": 8,
+      "renewable-quota": 7,
+      "aggregator-free": 5,
+      "trial-credits": 4,
+      "community-free": 0,
+      "card-required": 0,
+      "unclassified": 0
+    },
+    "verificationStatus": {
+      "VERIFIED_LIVE": 9,
+      "DOCUMENTED_FREE": 15
+    },
+    "lastVerifiedRange": {
+      "from": "2026-09-26T00:00:00Z",
+      "to": "2026-09-26T00:00:00Z"
+    },
+    "requirements": {
+      "requiresCreditCard": 0,
+      "requiresPhone": 2,
+      "requiresAccount": 24,
+      "geographicRestrictionsTracked": false
+    }
+  },
+  "providers": [
+    {
+      "id": "google-ai-studio",
+      "name": "Google AI Studio",
+      "slug": "google-ai-studio",
+      "logo": "/icons/gemini.svg",
+      "logoAlt": "Google Gemini icon",
+      "models": [
+        "gemini-2.0-flash",
+        "gemini-2.5-flash",
+        "gemma-2-9b"
+      ],
+      "modelCount": 3,
+      "requiresCreditCard": false,
+      "modalities": [
+        "Text",
+        "Reasoning",
+        "Vision",
+        "Code",
+        "Audio",
+        "Embedding"
+      ],
+      "tier": "Permanent Free",
+      "tierClass": "Permanent Free",
+      "rateLimits": "15 RPM, 1M tokens/day",
+      "officialDocsUrl": "https://ai.google.dev/gemini-api/docs",
+      "officialSignupUrl": "https://aistudio.google.com/apikey",
+      "description": "Google's official AI studio offering Gemini 2.0 Flash, Gemini 2.5 Flash, and Gemma 2 models with generous free quotas.",
+      "speedTokPerSec": 150,
+      "contextWindow": "1M tokens",
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "offerings": [
+        "gemini-2.0-flash-free",
+        "gemini-1.5-flash-free"
+      ],
+      "offeringCount": 2,
+      "sources": {
+        "docs": "https://ai.google.dev/gemini-api/docs",
+        "signup": "https://aistudio.google.com/apikey"
+      }
+    },
+    {
+      "id": "groq",
+      "name": "Groq",
+      "slug": "groq",
+      "logo": "/icons/groq.svg",
+      "logoAlt": "Groq LPU icon",
+      "models": [
+        "llama-3.3-70b",
+        "llama-3.1-8b",
+        "qwen-2.5-coder-32b",
+        "qwen-2.5-72b",
+        "mixtral-8x7b",
+        "gemma-2-9b"
+      ],
+      "modelCount": 6,
+      "requiresCreditCard": false,
+      "modalities": [
+        "Text",
+        "Code",
+        "Reasoning"
+      ],
+      "tier": "Permanent Free",
+      "tierClass": "Permanent Free",
+      "rateLimits": "30 RPM, 14,400 req/day",
+      "officialDocsUrl": "https://console.groq.com/docs",
+      "officialSignupUrl": "https://console.groq.com/keys",
+      "description": "Ultra-low latency inference via custom LPU chips. Fastest free tier at 330+ tok/s on Llama 3.3 70B.",
+      "speedTokPerSec": 330,
+      "contextWindow": "128K tokens",
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "offerings": [
+        "groq-llama-3.3-70b-free",
+        "groq-llama-3.1-8b-free",
+        "groq-qwen-2.5-coder-32b-free",
+        "groq-qwen-2.5-72b-free"
+      ],
+      "offeringCount": 4,
+      "sources": {
+        "docs": "https://console.groq.com/docs",
+        "signup": "https://console.groq.com/keys"
+      }
+    },
+    {
+      "id": "sambanova",
+      "name": "SambaNova Systems",
+      "slug": "sambanova",
+      "logo": "/icons/sambanova.svg",
+      "logoAlt": "SambaNova RDU icon",
+      "models": [
+        "llama-3.3-70b",
+        "deepseek-r1",
+        "qwen-2.5-72b"
+      ],
+      "modelCount": 3,
+      "requiresCreditCard": false,
+      "modalities": [
+        "Text",
+        "Reasoning",
+        "Code"
+      ],
+      "tier": "Permanent Free",
+      "tierClass": "aggregator",
+      "rateLimits": "~20 RPM, 200 RPD daily quota",
+      "officialDocsUrl": "https://docs.sambanova.ai/",
+      "officialSignupUrl": "https://www.sambanova.ai/",
+      "description": "Reconfigurable dataflow unit (RDU) inference cloud. Sub-second latency on SN40L RDUs with daily free quota.",
+      "speedTokPerSec": 250,
+      "contextWindow": "128K tokens",
+      "isOfficialProvider": false,
+      "isAggregator": true,
+      "offerings": [
+        "sambanova-llama-3.3-70b-free"
+      ],
+      "offeringCount": 1,
+      "sources": {
+        "docs": "https://docs.sambanova.ai/",
+        "signup": "https://www.sambanova.ai/"
+      }
+    },
+    {
+      "id": "cerebras",
+      "name": "Cerebras",
+      "slug": "cerebras",
+      "logo": "/icons/cerebras.svg",
+      "logoAlt": "Cerebras wafer-scale icon",
+      "models": [
+        "llama-3.3-70b",
+        "llama-3.1-8b",
+        "llama-3.1-70b"
+      ],
+      "modelCount": 3,
+      "requiresCreditCard": false,
+      "modalities": [
+        "Text",
+        "Code",
+        "Reasoning"
+      ],
+      "tier": "Permanent Free",
+      "tierClass": "Permanent Free",
+      "rateLimits": "30 RPM, 1M tokens/day",
+      "officialDocsUrl": "https://docs.cerebras.ai/",
+      "officialSignupUrl": "https://cloud.cerebras.ai/",
+      "description": "Wafer-scale AI inference on custom CS-3 systems. Fastest free tier at 2,100+ tok/s on Llama 3.3 70B.",
+      "speedTokPerSec": 2100,
+      "contextWindow": "8K tokens",
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "offerings": [
+        "cerebras-llama-3.3-70b-free",
+        "cerebras-llama-3.1-8b-free"
+      ],
+      "offeringCount": 2,
+      "sources": {
+        "docs": "https://docs.cerebras.ai/",
+        "signup": "https://cloud.cerebras.ai/"
+      }
+    },
+    {
+      "id": "nvidia-nim",
+      "name": "NVIDIA NIM",
+      "slug": "nvidia-nim",
+      "logo": "/icons/nvidia.svg",
+      "logoAlt": "NVIDIA NIM icon",
+      "models": [
+        "llama-3.3-70b",
+        "nemotron-nano",
+        "mistral-large",
+        "gemma-2-2b"
+      ],
+      "modelCount": 4,
+      "requiresCreditCard": false,
+      "modalities": [
+        "Text",
+        "Reasoning",
+        "Vision",
+        "Code"
+      ],
+      "tier": "Trial Credits",
+      "tierClass": "Trial Credits",
+      "rateLimits": "1,000 promotional API credits for developers",
+      "officialDocsUrl": "https://docs.nvidia.com/nim/",
+      "officialSignupUrl": "https://build.nvidia.com/",
+      "description": "NVIDIA inference microservices with 1,000 free promotional API credits. Enterprise-grade GPU-accelerated inference.",
+      "speedTokPerSec": 180,
+      "contextWindow": "128K tokens",
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "offerings": [
+        "nvidia-nim-llama-3.3-70b-free"
+      ],
+      "offeringCount": 1,
+      "sources": {
+        "docs": "https://docs.nvidia.com/nim/",
+        "signup": "https://build.nvidia.com/"
+      }
+    },
+    {
+      "id": "mistral-ai",
+      "name": "Mistral AI",
+      "slug": "mistral",
+      "logo": "/icons/mistral.svg",
+      "logoAlt": "Mistral AI icon",
+      "models": [
+        "mistral-nemo-12b",
+        "mistral-codestral",
+        "mistral-large"
+      ],
+      "modelCount": 3,
+      "requiresCreditCard": false,
+      "modalities": [
+        "Text",
+        "Reasoning",
+        "Code"
+      ],
+      "tier": "Quota Limits",
+      "tierClass": "Quota Limits",
+      "rateLimits": "1 RPS (60 RPM), phone verification required",
+      "officialDocsUrl": "https://docs.mistral.ai/platform/",
+      "officialSignupUrl": "https://platform.mistral.ai/",
+      "description": "European open-source LLM platform with MoE architecture. Free tier requires phone verification.",
+      "speedTokPerSec": 200,
+      "contextWindow": "128K tokens",
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "offerings": [
+        "mistral-nemo-free",
+        "mistral-codestral-free"
+      ],
+      "offeringCount": 2,
+      "sources": {
+        "docs": "https://docs.mistral.ai/platform/",
+        "signup": "https://platform.mistral.ai/"
+      }
+    },
+    {
+      "id": "cloudflare-workers-ai",
+      "name": "Cloudflare Workers AI",
+      "slug": "cloudflare",
+      "logo": "/icons/cloudflare.svg",
+      "logoAlt": "Cloudflare Workers AI icon",
+      "models": [
+        "llama-3.3-70b",
+        "llama-3.1-8b",
+        "deepseek-r1",
+        "whisper-large-v3",
+        "bge-large-en"
+      ],
+      "modelCount": 5,
+      "requiresCreditCard": false,
+      "modalities": [
+        "Text",
+        "Reasoning",
+        "Vision",
+        "Audio",
+        "Embedding"
+      ],
+      "tier": "Permanent Free",
+      "tierClass": "Permanent Free",
+      "rateLimits": "10,000 neurons/day free allocation",
+      "officialDocsUrl": "https://developers.cloudflare.com/workers-ai/",
+      "officialSignupUrl": "https://dash.cloudflare.com/?to=/:account/workers-ai",
+      "description": "Edge AI inference on Cloudflare's global network. 10,000 neurons/day free for text, audio, vision, and embeddings.",
+      "speedTokPerSec": 80,
+      "contextWindow": "128K tokens",
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "offerings": [
+        "cloudflare-workers-ai-free",
+        "cloudflare-workers-ai-llama-3.1-free"
+      ],
+      "offeringCount": 2,
+      "sources": {
+        "docs": "https://developers.cloudflare.com/workers-ai/",
+        "signup": "https://dash.cloudflare.com/?to=/:account/workers-ai"
+      }
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "slug": "openrouter",
+      "logo": "/icons/openrouter.svg",
+      "logoAlt": "OpenRouter icon",
+      "models": [
+        "meta-llama/llama-3.3-70b:free",
+        "qwen/qwen2.5-72b:free",
+        "meta-llama/llama-3.1-8b:free",
+        "deepseek/deepseek-r1:free"
+      ],
+      "modelCount": 35,
+      "requiresCreditCard": false,
+      "modalities": [
+        "Text",
+        "Reasoning",
+        "Code",
+        "Vision"
+      ],
+      "tier": "Free Aggregator",
+      "tierClass": "aggregator",
+      "rateLimits": "3 RPM, no credit card required for :free models",
+      "officialDocsUrl": "https://openrouter.ai/docs",
+      "officialSignupUrl": "https://openrouter.ai/keys",
+      "description": "Multi-provider routing layer aggregating 35+ free model endpoints. :free models available with rate limits.",
+      "speedTokPerSec": 90,
+      "contextWindow": "164K tokens",
+      "isOfficialProvider": false,
+      "isAggregator": true,
+      "offerings": [
+        "openrouter-llama-3.3-70b-free",
+        "openrouter-qwen-2.5-72b-free",
+        "openrouter-llama-3.1-8b-free"
+      ],
+      "offeringCount": 3,
+      "sources": {
+        "docs": "https://openrouter.ai/docs",
+        "signup": "https://openrouter.ai/keys"
+      }
+    },
+    {
+      "id": "huggingface",
+      "name": "Hugging Face",
+      "slug": "huggingface",
+      "logo": "/icons/huggingface.svg",
+      "logoAlt": "Hugging Face icon",
+      "models": [
+        "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "meta-llama/Meta-Llama-3.3-70B-Instruct",
+        "mistralai/Mistral-7B-Instruct-v0.3"
+      ],
+      "modelCount": 3,
+      "requiresCreditCard": false,
+      "modalities": [
+        "Text",
+        "Code",
+        "Embedding"
+      ],
+      "tier": "Community Free",
+      "tierClass": "aggregator",
+      "rateLimits": "1,000 requests/day via Inference API (serverless)",
+      "officialDocsUrl": "https://huggingface.co/docs/huggingface.js/guides/inference",
+      "officialSignupUrl": "https://huggingface.co/settings/tokens",
+      "description": "Open-source model hub with serverless Inference API. 1,000 requests/day free on serverless endpoints.",
+      "speedTokPerSec": 30,
+      "contextWindow": "128K tokens",
+      "isOfficialProvider": false,
+      "isAggregator": true,
+      "offerings": [
+        "huggingface-llama-3.1-8b-free",
+        "huggingface-llama-3.3-70b-free"
+      ],
+      "offeringCount": 2,
+      "sources": {
+        "docs": "https://huggingface.co/docs/huggingface.js/guides/inference",
+        "signup": "https://huggingface.co/settings/tokens"
+      }
+    },
+    {
+      "id": "github-models",
+      "name": "GitHub Models",
+      "slug": "github-models",
+      "logo": "/icons/github.svg",
+      "logoAlt": "GitHub Models icon",
+      "models": [
+        "gpt-4o-mini",
+        "llama-3-8b",
+        "llama-3.3-70b",
+        "phi-4",
+        "qwen-2.5-coder-32b"
+      ],
+      "modelCount": 5,
+      "requiresCreditCard": false,
+      "modalities": [
+        "Text",
+        "Code",
+        "Reasoning"
+      ],
+      "tier": "Trial Credits",
+      "tierClass": "Trial Credits",
+      "rateLimits": "GitHub account required; Copilot limits apply",
+      "officialDocsUrl": "https://docs.github.com/en/models",
+      "officialSignupUrl": "https://github.com/features",
+      "description": "Free AI models via GitHub Models with GitHub account. GPT-4o mini, Llama 3.3, Phi-4 available with Copilot rate limits.",
+      "speedTokPerSec": 60,
+      "contextWindow": "128K tokens",
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "offerings": [
+        "github-models-gpt-4o-mini-free",
+        "github-models-llama-3.3-70b-free",
+        "github-models-phi-4-free"
+      ],
+      "offeringCount": 3,
+      "sources": {
+        "docs": "https://docs.github.com/en/models",
+        "signup": "https://github.com/features"
+      }
+    },
+    {
+      "id": "kilo-code",
+      "name": "Kilo Code / Kilo Gateway",
+      "slug": "kilo-gateway",
+      "logo": "/icons/kilo.svg",
+      "logoAlt": "Kilo Gateway icon",
+      "models": [
+        "deepseek-r1",
+        "mistral-nemo-12b",
+        "qwen-2.5-72b",
+        "qwen-2.5-coder-32b",
+        "deepseek-coder"
+      ],
+      "modelCount": 5,
+      "requiresCreditCard": false,
+      "modalities": [
+        "Text",
+        "Reasoning",
+        "Code"
+      ],
+      "tier": "Free Aggregator",
+      "tierClass": "Free Aggregator",
+      "rateLimits": "Developer trial quota; varies by model",
+      "officialDocsUrl": "https://kilo.code/",
+      "officialSignupUrl": "https://kilo.code/",
+      "description": "Free AI model gateway routing to frontier models including Qwen 2.5 Coder, DeepSeek Coder, and MiMo V2.5 with zero-cost access.",
+      "speedTokPerSec": 150,
+      "contextWindow": "128K tokens",
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "offerings": [
+        "kilo-code-qwen-2.5-coder-32b-free",
+        "kilo-code-deepseek-coder-free"
+      ],
+      "offeringCount": 2,
+      "sources": {
+        "docs": "https://kilo.code/",
+        "signup": "https://kilo.code/"
+      }
+    },
+    {
+      "id": "chutes-ai",
+      "name": "Chutes.ai",
+      "slug": "chutes-ai",
+      "logo": "/icons/chutes.svg",
+      "logoAlt": "Chutes.ai icon",
+      "models": [
+        "deepseek-r1",
+        "llama-3.3-70b",
+        "qwen-2.5-72b"
+      ],
+      "modelCount": 3,
+      "requiresCreditCard": false,
+      "modalities": [
+        "Text",
+        "Reasoning",
+        "Code"
+      ],
+      "tier": "Community Free",
+      "tierClass": "aggregator",
+      "rateLimits": "Free tier with rate limits",
+      "officialDocsUrl": "https://docs.chutes.ai/",
+      "officialSignupUrl": "https://chutes.ai/",
+      "description": "Community-hosted inference with free tiers. Fast deployment for open-source LLMs with competitive rates.",
+      "speedTokPerSec": 100,
+      "contextWindow": "128K tokens",
+      "isOfficialProvider": false,
+      "isAggregator": true,
+      "offerings": [],
+      "offeringCount": 0,
+      "sources": {
+        "docs": "https://docs.chutes.ai/",
+        "signup": "https://chutes.ai/"
+      }
+    },
+    {
+      "id": "modelscope",
+      "name": "ModelScope",
+      "slug": "modelscope",
+      "logo": "/icons/modelscope.svg",
+      "logoAlt": "ModelScope icon",
+      "models": [
+        "qwen-2.5-72b",
+        "llama-3-8b",
+        "mistral-7b"
+      ],
+      "modelCount": 3,
+      "requiresCreditCard": false,
+      "modalities": [
+        "Text",
+        "Code",
+        "Vision"
+      ],
+      "tier": "Community Free",
+      "tierClass": "aggregator",
+      "rateLimits": "Free tier with rate limits",
+      "officialDocsUrl": "https://modelscope.cn/",
+      "officialSignupUrl": "https://modelscope.cn/",
+      "description": "Chinese AI model hub with free inference endpoints for text, code, and vision models.",
+      "speedTokPerSec": 80,
+      "contextWindow": "128K tokens",
+      "isOfficialProvider": false,
+      "isAggregator": true,
+      "offerings": [],
+      "offeringCount": 0,
+      "sources": {
+        "docs": "https://modelscope.cn/",
+        "signup": "https://modelscope.cn/"
+      }
+    },
+    {
+      "id": "ovhcloud-ai",
+      "name": "OVHcloud AI Endpoints",
+      "slug": "ovhcloud-ai",
+      "logo": "/icons/ovhcloud.svg",
+      "logoAlt": "OVHcloud AI icon",
+      "models": [
+        "mistral-7b",
+        "llama-3-8b",
+        "qwen-2-1.5b"
+      ],
+      "modelCount": 3,
+      "requiresCreditCard": false,
+      "modalities": [
+        "Text",
+        "Code"
+      ],
+      "tier": "Community Free",
+      "tierClass": "aggregator",
+      "rateLimits": "Free tier with rate limits",
+      "officialDocsUrl": "https://docs.ovhcloud.com/en/public-cloud/ai-endpoints/",
+      "officialSignupUrl": "https://www.ovhcloud.com/public-cloud/ai-endpoints/",
+      "description": "European sovereign AI endpoints with free tier. GDPR-compliant inference on OVHcloud infrastructure.",
+      "speedTokPerSec": 50,
+      "contextWindow": "128K tokens",
+      "isOfficialProvider": false,
+      "isAggregator": true,
+      "offerings": [],
+      "offeringCount": 0,
+      "sources": {
+        "docs": "https://docs.ovhcloud.com/en/public-cloud/ai-endpoints/",
+        "signup": "https://www.ovhcloud.com/public-cloud/ai-endpoints/"
+      }
+    }
+  ],
+  "offerings": [
+    {
+      "id": "gemini-2.0-flash-free",
+      "canonicalModelId": "gemini-2.0-flash",
+      "canonicalProviderId": "google-ai-studio",
+      "modelDisplayName": "Gemini 2.0 Flash",
+      "providerDisplayName": "Google AI Studio",
+      "providerModelId": "gemini-2.0-flash",
+      "freeStatus": "PERMANENT_FREE",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "rpm": 15,
+        "rpd": 10000,
+        "tpm": 1000000,
+        "documented": "15 RPM, 1M tokens/day via Google AI Studio"
+      },
+      "contextLimit": 1048576,
+      "apiCompatibility": "google",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": true,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://ai.google.dev/gemini-api/docs",
+      "officialSignupUrl": "https://aistudio.google.com/apikey",
+      "verificationStatus": "VERIFIED_LIVE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 120,
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "category": "permanent-free",
+      "providerKey": "google-ai-studio",
+      "sources": {
+        "docs": "https://ai.google.dev/gemini-api/docs",
+        "signup": "https://aistudio.google.com/apikey"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "gemini-1.5-flash-free",
+      "canonicalModelId": "gemini-1.5-flash",
+      "canonicalProviderId": "google-ai-studio",
+      "modelDisplayName": "Gemini 1.5 Flash",
+      "providerDisplayName": "Google AI Studio",
+      "providerModelId": "gemini-1.5-flash",
+      "freeStatus": "PERMANENT_FREE",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "rpm": 15,
+        "rpd": 15000,
+        "tpm": 1500000,
+        "documented": "15 RPM, 1.5M tokens/day via Google AI Studio"
+      },
+      "contextLimit": 1048576,
+      "apiCompatibility": "google",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": true,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://ai.google.dev/gemini-api/docs",
+      "officialSignupUrl": "https://aistudio.google.com/apikey",
+      "verificationStatus": "VERIFIED_LIVE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 115,
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "category": "permanent-free",
+      "providerKey": "google-ai-studio",
+      "sources": {
+        "docs": "https://ai.google.dev/gemini-api/docs",
+        "signup": "https://aistudio.google.com/apikey"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "groq-llama-3.3-70b-free",
+      "canonicalModelId": "llama-3.3-70b",
+      "canonicalProviderId": "groq",
+      "modelDisplayName": "Llama 3.3 70B",
+      "providerDisplayName": "Groq",
+      "providerModelId": "llama-3.3-70b",
+      "freeStatus": "PERMANENT_FREE",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "rpm": 30,
+        "rpd": 14400,
+        "documented": "30 RPM, 14,400 requests/day via Groq Console"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://console.groq.com/docs",
+      "officialSignupUrl": "https://console.groq.com/keys",
+      "verificationStatus": "VERIFIED_LIVE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 45,
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "category": "permanent-free",
+      "providerKey": "groq",
+      "sources": {
+        "docs": "https://console.groq.com/docs",
+        "signup": "https://console.groq.com/keys"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "groq-llama-3.1-8b-free",
+      "canonicalModelId": "llama-3.1-8b",
+      "canonicalProviderId": "groq",
+      "modelDisplayName": "Llama 3.1 8B",
+      "providerDisplayName": "Groq",
+      "providerModelId": "llama-3.1-8b",
+      "freeStatus": "PERMANENT_FREE",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "rpm": 30,
+        "rpd": 14400,
+        "documented": "30 RPM, 14,400 requests/day via Groq Console"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": false,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://console.groq.com/docs",
+      "officialSignupUrl": "https://console.groq.com/keys",
+      "verificationStatus": "VERIFIED_LIVE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 35,
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "category": "permanent-free",
+      "providerKey": "groq",
+      "sources": {
+        "docs": "https://console.groq.com/docs",
+        "signup": "https://console.groq.com/keys"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "groq-qwen-2.5-coder-32b-free",
+      "canonicalModelId": "qwen-2.5-coder-32b",
+      "canonicalProviderId": "groq",
+      "modelDisplayName": "Qwen 2.5 Coder 32B",
+      "providerDisplayName": "Groq",
+      "providerModelId": "qwen-2.5-coder-32b",
+      "freeStatus": "PERMANENT_FREE",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "rpm": 30,
+        "rpd": 14400,
+        "documented": "30 RPM, 14,400 requests/day via Groq Console"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": false,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://console.groq.com/docs",
+      "officialSignupUrl": "https://console.groq.com/keys",
+      "verificationStatus": "VERIFIED_LIVE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 50,
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "category": "permanent-free",
+      "providerKey": "groq",
+      "sources": {
+        "docs": "https://console.groq.com/docs",
+        "signup": "https://console.groq.com/keys"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "groq-qwen-2.5-72b-free",
+      "canonicalModelId": "qwen-2.5-72b",
+      "canonicalProviderId": "groq",
+      "modelDisplayName": "Qwen 2.5 72B",
+      "providerDisplayName": "Groq",
+      "providerModelId": "qwen-2.5-72b",
+      "freeStatus": "PERMANENT_FREE",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "rpm": 30,
+        "rpd": 14400,
+        "documented": "30 RPM, 14,400 requests/day via Groq Console"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://console.groq.com/docs",
+      "officialSignupUrl": "https://console.groq.com/keys",
+      "verificationStatus": "VERIFIED_LIVE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 55,
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "category": "permanent-free",
+      "providerKey": "groq",
+      "sources": {
+        "docs": "https://console.groq.com/docs",
+        "signup": "https://console.groq.com/keys"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "mistral-nemo-free",
+      "canonicalModelId": "mistral-nemo-12b",
+      "canonicalProviderId": "mistral",
+      "modelDisplayName": "Mistral NeMo 12B",
+      "providerDisplayName": "Mistral AI",
+      "providerModelId": "mistral-nemo-instruct-2407",
+      "freeStatus": "FREE_TIER",
+      "requiresCreditCard": false,
+      "requiresPhone": true,
+      "rateLimits": {
+        "rpm": 1,
+        "rpd": 60,
+        "tpm": 60000,
+        "documented": "1 RPS (60 RPM), phone verification required via La Plateforme"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://docs.mistral.ai/platform/",
+      "officialSignupUrl": "https://platform.mistral.ai/",
+      "verificationStatus": "DOCUMENTED_FREE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 80,
+      "isOfficialProvider": false,
+      "isAggregator": false,
+      "category": "renewable-quota",
+      "providerKey": "mistral-ai",
+      "sources": {
+        "docs": "https://docs.mistral.ai/platform/",
+        "signup": "https://platform.mistral.ai/"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "mistral-codestral-free",
+      "canonicalModelId": "mistral-codestral",
+      "canonicalProviderId": "mistral",
+      "modelDisplayName": "Codestral 22B",
+      "providerDisplayName": "Mistral AI",
+      "providerModelId": "codestral-22b-instruct",
+      "freeStatus": "FREE_TIER",
+      "requiresCreditCard": false,
+      "requiresPhone": true,
+      "rateLimits": {
+        "rpm": 1,
+        "rpd": 60,
+        "tpm": 60000,
+        "documented": "1 RPS (60 RPM), phone verification required via La Plateforme"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://docs.mistral.ai/platform/",
+      "officialSignupUrl": "https://platform.mistral.ai/",
+      "verificationStatus": "DOCUMENTED_FREE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 85,
+      "isOfficialProvider": false,
+      "isAggregator": false,
+      "category": "renewable-quota",
+      "providerKey": "mistral-ai",
+      "sources": {
+        "docs": "https://docs.mistral.ai/platform/",
+        "signup": "https://platform.mistral.ai/"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "openrouter-llama-3.3-70b-free",
+      "canonicalModelId": "llama-3.3-70b",
+      "canonicalProviderId": "openrouter",
+      "modelDisplayName": "Meta Llama 3.3 70B",
+      "providerDisplayName": "OpenRouter",
+      "providerModelId": "meta-llama/llama-3.3-70b:free",
+      "freeStatus": "FREE_AGGREGATOR",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "rpm": 3,
+        "rpd": 50,
+        "tpm": 100000,
+        "documented": "3 RPM, no credit card required for :free models"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://openrouter.ai/docs",
+      "officialSignupUrl": "https://openrouter.ai/keys",
+      "verificationStatus": "DOCUMENTED_FREE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 200,
+      "isOfficialProvider": false,
+      "isAggregator": true,
+      "category": "aggregator-free",
+      "providerKey": "openrouter",
+      "sources": {
+        "docs": "https://openrouter.ai/docs",
+        "signup": "https://openrouter.ai/keys"
+      },
+      "liveCheck": {
+        "status": "not_found",
+        "checkedAt": "2026-10-09T11:08:33.015Z",
+        "source": "https://openrouter.ai/api/v1/models",
+        "match": "exact"
+      }
+    },
+    {
+      "id": "openrouter-qwen-2.5-72b-free",
+      "canonicalModelId": "qwen-2.5-72b",
+      "canonicalProviderId": "openrouter",
+      "modelDisplayName": "Qwen 2.5 72B",
+      "providerDisplayName": "OpenRouter",
+      "providerModelId": "qwen/qwen2.5-72b:free",
+      "freeStatus": "FREE_AGGREGATOR",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "rpm": 3,
+        "rpd": 50,
+        "tpm": 100000,
+        "documented": "3 RPM, no credit card required for :free models"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://openrouter.ai/docs",
+      "officialSignupUrl": "https://openrouter.ai/keys",
+      "verificationStatus": "DOCUMENTED_FREE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 250,
+      "isOfficialProvider": false,
+      "isAggregator": true,
+      "category": "aggregator-free",
+      "providerKey": "openrouter",
+      "sources": {
+        "docs": "https://openrouter.ai/docs",
+        "signup": "https://openrouter.ai/keys"
+      },
+      "liveCheck": {
+        "status": "not_found",
+        "checkedAt": "2026-10-09T11:08:33.015Z",
+        "source": "https://openrouter.ai/api/v1/models",
+        "match": "exact"
+      }
+    },
+    {
+      "id": "openrouter-llama-3.1-8b-free",
+      "canonicalModelId": "llama-3.1-8b",
+      "canonicalProviderId": "openrouter",
+      "modelDisplayName": "Meta Llama 3.1 8B",
+      "providerDisplayName": "OpenRouter",
+      "providerModelId": "meta-llama/llama-3.1-8b:free",
+      "freeStatus": "FREE_AGGREGATOR",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "rpm": 3,
+        "rpd": 50,
+        "tpm": 100000,
+        "documented": "3 RPM, no credit card required for :free models"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": false,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://openrouter.ai/docs",
+      "officialSignupUrl": "https://openrouter.ai/keys",
+      "verificationStatus": "DOCUMENTED_FREE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 190,
+      "isOfficialProvider": false,
+      "isAggregator": true,
+      "category": "aggregator-free",
+      "providerKey": "openrouter",
+      "sources": {
+        "docs": "https://openrouter.ai/docs",
+        "signup": "https://openrouter.ai/keys"
+      },
+      "liveCheck": {
+        "status": "not_found",
+        "checkedAt": "2026-10-09T11:08:33.015Z",
+        "source": "https://openrouter.ai/api/v1/models",
+        "match": "exact"
+      }
+    },
+    {
+      "id": "huggingface-llama-3.1-8b-free",
+      "canonicalModelId": "llama-3.1-8b",
+      "canonicalProviderId": "huggingface",
+      "modelDisplayName": "Llama 3.1 8B Instruct",
+      "providerDisplayName": "Hugging Face",
+      "providerModelId": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+      "freeStatus": "FREE_TIER",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "rpd": 1000,
+        "documented": "1,000 requests/day via Inference API (serverless)"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": false,
+        "coding": true,
+        "vision": false,
+        "functionCalling": false
+      },
+      "officialDocsUrl": "https://huggingface.co/docs/huggingface.js/guides/inference",
+      "officialSignupUrl": "https://huggingface.co/settings/tokens",
+      "verificationStatus": "VERIFIED_LIVE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 500,
+      "isOfficialProvider": false,
+      "isAggregator": false,
+      "category": "renewable-quota",
+      "providerKey": "huggingface",
+      "sources": {
+        "docs": "https://huggingface.co/docs/huggingface.js/guides/inference",
+        "signup": "https://huggingface.co/settings/tokens"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "huggingface-llama-3.3-70b-free",
+      "canonicalModelId": "llama-3.3-70b",
+      "canonicalProviderId": "huggingface",
+      "modelDisplayName": "Llama 3.3 70B Instruct",
+      "providerDisplayName": "Hugging Face",
+      "providerModelId": "meta-llama/Meta-Llama-3.3-70B-Instruct",
+      "freeStatus": "FREE_TIER",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "rpd": 500,
+        "documented": "500 requests/day via Inference API (serverless, rate-limited)"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://huggingface.co/docs/huggingface.js/guides/inference",
+      "officialSignupUrl": "https://huggingface.co/settings/tokens",
+      "verificationStatus": "DOCUMENTED_FREE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 600,
+      "isOfficialProvider": false,
+      "isAggregator": false,
+      "category": "renewable-quota",
+      "providerKey": "huggingface",
+      "sources": {
+        "docs": "https://huggingface.co/docs/huggingface.js/guides/inference",
+        "signup": "https://huggingface.co/settings/tokens"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "cloudflare-workers-ai-free",
+      "canonicalModelId": "llama-3.3-70b",
+      "canonicalProviderId": "cloudflare",
+      "modelDisplayName": "Llama 3.3 70B",
+      "providerDisplayName": "Cloudflare Workers AI",
+      "providerModelId": "meta/llama-3.3-70b-instruct",
+      "freeStatus": "FREE_TIER",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "rpm": 5,
+        "rpd": 10000,
+        "documented": "10,000 neurons/day free allocation"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://developers.cloudflare.com/workers-ai/",
+      "officialSignupUrl": "https://dash.cloudflare.com/?to=/:account/workers-ai",
+      "verificationStatus": "VERIFIED_LIVE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 150,
+      "isOfficialProvider": false,
+      "isAggregator": false,
+      "category": "renewable-quota",
+      "providerKey": "cloudflare-workers-ai",
+      "sources": {
+        "docs": "https://developers.cloudflare.com/workers-ai/",
+        "signup": "https://dash.cloudflare.com/?to=/:account/workers-ai"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "cloudflare-workers-ai-llama-3.1-free",
+      "canonicalModelId": "llama-3.1-8b",
+      "canonicalProviderId": "cloudflare",
+      "modelDisplayName": "Llama 3.1 8B",
+      "providerDisplayName": "Cloudflare Workers AI",
+      "providerModelId": "meta/llama-3.1-8b-instruct",
+      "freeStatus": "FREE_TIER",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "rpm": 5,
+        "rpd": 10000,
+        "documented": "10,000 neurons/day free allocation"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": false,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://developers.cloudflare.com/workers-ai/",
+      "officialSignupUrl": "https://dash.cloudflare.com/?to=/:account/workers-ai",
+      "verificationStatus": "VERIFIED_LIVE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 140,
+      "isOfficialProvider": false,
+      "isAggregator": false,
+      "category": "renewable-quota",
+      "providerKey": "cloudflare-workers-ai",
+      "sources": {
+        "docs": "https://developers.cloudflare.com/workers-ai/",
+        "signup": "https://dash.cloudflare.com/?to=/:account/workers-ai"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "sambanova-llama-3.3-70b-free",
+      "canonicalModelId": "llama-3.3-70b",
+      "canonicalProviderId": "sambanova",
+      "modelDisplayName": "Llama 3.3 70B",
+      "providerDisplayName": "SambaNova Systems",
+      "providerModelId": "llama-3.3-70b",
+      "freeStatus": "FREE_TIER",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "rpm": 20,
+        "rpd": 200,
+        "tpm": 200000,
+        "documented": "~20 RPM / 200 RPD daily free quota via SN40L RDUs, sub-second latency"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://docs.sambanova.ai/",
+      "officialSignupUrl": "https://www.sambanova.ai/",
+      "verificationStatus": "DOCUMENTED_FREE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 55,
+      "isOfficialProvider": false,
+      "isAggregator": false,
+      "category": "renewable-quota",
+      "providerKey": "sambanova",
+      "sources": {
+        "docs": "https://docs.sambanova.ai/",
+        "signup": "https://www.sambanova.ai/"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "nvidia-nim-llama-3.3-70b-free",
+      "canonicalModelId": "llama-3.3-70b",
+      "canonicalProviderId": "nvidia-nim",
+      "modelDisplayName": "Llama 3.3 70B",
+      "providerDisplayName": "NVIDIA NIM",
+      "providerModelId": "meta/llama-3.3-70b",
+      "freeStatus": "TRIAL",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "documented": "1,000 free promotional API credits for developers; standard rate limits apply after trial"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://docs.nvidia.com/nim/",
+      "officialSignupUrl": "https://build.nvidia.com/",
+      "verificationStatus": "DOCUMENTED_FREE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 80,
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "category": "trial-credits",
+      "providerKey": "nvidia-nim",
+      "sources": {
+        "docs": "https://docs.nvidia.com/nim/",
+        "signup": "https://build.nvidia.com/"
+      },
+      "liveCheck": {
+        "status": "not_found",
+        "checkedAt": "2026-10-09T11:08:33.046Z",
+        "source": "https://integrate.api.nvidia.com/v1/models",
+        "match": "exact"
+      }
+    },
+    {
+      "id": "cerebras-llama-3.3-70b-free",
+      "canonicalModelId": "llama-3.3-70b",
+      "canonicalProviderId": "cerebras",
+      "modelDisplayName": "Llama 3.3 70B",
+      "providerDisplayName": "Cerebras",
+      "providerModelId": "llama-3.3-70b",
+      "freeStatus": "PERMANENT_FREE",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "documented": "30 RPM, 1M tokens/day via Cerebras Inference API"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://docs.cerebras.ai/",
+      "officialSignupUrl": "https://cloud.cerebras.ai/",
+      "verificationStatus": "DOCUMENTED_FREE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 250,
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "category": "permanent-free",
+      "providerKey": "cerebras",
+      "sources": {
+        "docs": "https://docs.cerebras.ai/",
+        "signup": "https://cloud.cerebras.ai/"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "cerebras-llama-3.1-8b-free",
+      "canonicalModelId": "llama-3.1-8b",
+      "canonicalProviderId": "cerebras",
+      "modelDisplayName": "Llama 3.1 8B",
+      "providerDisplayName": "Cerebras",
+      "providerModelId": "llama-3.1-8b",
+      "freeStatus": "PERMANENT_FREE",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "documented": "30 RPM, 1M tokens/day via Cerebras Inference API"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://docs.cerebras.ai/",
+      "officialSignupUrl": "https://cloud.cerebras.ai/",
+      "verificationStatus": "DOCUMENTED_FREE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 300,
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "category": "permanent-free",
+      "providerKey": "cerebras",
+      "sources": {
+        "docs": "https://docs.cerebras.ai/",
+        "signup": "https://cloud.cerebras.ai/"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "github-models-gpt-4o-mini-free",
+      "canonicalModelId": "gpt-4o-mini",
+      "canonicalProviderId": "github-models",
+      "modelDisplayName": "GPT-4o mini",
+      "providerDisplayName": "GitHub Models",
+      "providerModelId": "gpt-4o-mini",
+      "freeStatus": "TRIAL",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "documented": "GitHub account required; Copilot limits apply (15 RPM, 150 RPD)"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": true,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://docs.github.com/en/models",
+      "officialSignupUrl": "https://github.com/features",
+      "verificationStatus": "DOCUMENTED_FREE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 50,
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "category": "trial-credits",
+      "providerKey": "github-models",
+      "sources": {
+        "docs": "https://docs.github.com/en/models",
+        "signup": "https://github.com/features"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "github-models-llama-3.3-70b-free",
+      "canonicalModelId": "llama-3.3-70b",
+      "canonicalProviderId": "github-models",
+      "modelDisplayName": "Llama 3.3 70B",
+      "providerDisplayName": "GitHub Models",
+      "providerModelId": "llama-3.3-70b",
+      "freeStatus": "TRIAL",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "documented": "GitHub account required; Copilot limits apply (15 RPM, 150 RPD)"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://docs.github.com/en/models",
+      "officialSignupUrl": "https://github.com/features",
+      "verificationStatus": "DOCUMENTED_FREE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 45,
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "category": "trial-credits",
+      "providerKey": "github-models",
+      "sources": {
+        "docs": "https://docs.github.com/en/models",
+        "signup": "https://github.com/features"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "github-models-phi-4-free",
+      "canonicalModelId": "phi-4-14b",
+      "canonicalProviderId": "github-models",
+      "modelDisplayName": "Phi-4 (14B)",
+      "providerDisplayName": "GitHub Models",
+      "providerModelId": "phi-4-14b",
+      "freeStatus": "TRIAL",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "documented": "GitHub account required; Copilot limits apply (15 RPM, 150 RPD)"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": true,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://docs.github.com/en/models",
+      "officialSignupUrl": "https://github.com/features",
+      "verificationStatus": "DOCUMENTED_FREE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 40,
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "category": "trial-credits",
+      "providerKey": "github-models",
+      "sources": {
+        "docs": "https://docs.github.com/en/models",
+        "signup": "https://github.com/features"
+      },
+      "liveCheck": {
+        "status": "not_checked",
+        "reason": "auth_required",
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "kilo-code-qwen-2.5-coder-32b-free",
+      "canonicalModelId": "qwen-2.5-coder-32b",
+      "canonicalProviderId": "kilo-code",
+      "modelDisplayName": "Qwen 2.5 Coder 32B",
+      "providerDisplayName": "Kilo Code",
+      "providerModelId": "qwen-2.5-coder-32b",
+      "freeStatus": "FREE_AGGREGATOR",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "documented": "Developer trial quota; varies by model"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://kilo.code/",
+      "officialSignupUrl": "https://kilo.code/",
+      "verificationStatus": "DOCUMENTED_FREE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 60,
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "category": "aggregator-free",
+      "providerKey": "kilo-code",
+      "sources": {
+        "docs": "https://kilo.code/",
+        "signup": "https://kilo.code/"
+      },
+      "liveCheck": {
+        "status": "listed",
+        "checkedAt": "2026-10-09T11:08:33.210Z",
+        "source": "https://api.kilo.ai/api/gateway/models",
+        "match": "contains"
+      }
+    },
+    {
+      "id": "kilo-code-deepseek-coder-free",
+      "canonicalModelId": "deepseek-r1-distill-qwen-32b",
+      "canonicalProviderId": "kilo-code",
+      "modelDisplayName": "DeepSeek Coder V2 (Distill Qwen 32B)",
+      "providerDisplayName": "Kilo Code",
+      "providerModelId": "deepseek-r1-distill-qwen-32b",
+      "freeStatus": "FREE_AGGREGATOR",
+      "requiresCreditCard": false,
+      "requiresPhone": false,
+      "rateLimits": {
+        "documented": "Developer trial quota; varies by model"
+      },
+      "contextLimit": 128000,
+      "apiCompatibility": "openai",
+      "capabilities": {
+        "reasoning": true,
+        "coding": true,
+        "vision": false,
+        "functionCalling": true
+      },
+      "officialDocsUrl": "https://kilo.code/",
+      "officialSignupUrl": "https://kilo.code/",
+      "verificationStatus": "DOCUMENTED_FREE",
+      "lastVerified": "2026-09-26T00:00:00Z",
+      "latencyMs": 55,
+      "isOfficialProvider": true,
+      "isAggregator": false,
+      "category": "aggregator-free",
+      "providerKey": "kilo-code",
+      "sources": {
+        "docs": "https://kilo.code/",
+        "signup": "https://kilo.code/"
+      },
+      "liveCheck": {
+        "status": "not_found",
+        "checkedAt": "2026-10-09T11:08:33.210Z",
+        "source": "https://api.kilo.ai/api/gateway/models",
+        "match": "contains"
+      }
+    }
+  ]
+}

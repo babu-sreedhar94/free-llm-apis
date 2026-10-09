@@ -1,0 +1,425 @@
+[
+  {
+    "id": "google-ai-studio",
+    "name": "Google AI Studio",
+    "slug": "google-ai-studio",
+    "logo": "/icons/gemini.svg",
+    "logoAlt": "Google Gemini icon",
+    "models": [
+      "gemini-2.0-flash",
+      "gemini-2.5-flash",
+      "gemma-2-9b"
+    ],
+    "modelCount": 3,
+    "requiresCreditCard": false,
+    "modalities": [
+      "Text",
+      "Reasoning",
+      "Vision",
+      "Code",
+      "Audio",
+      "Embedding"
+    ],
+    "tier": "Permanent Free",
+    "tierClass": "Permanent Free",
+    "rateLimits": "15 RPM, 1M tokens/day",
+    "officialDocsUrl": "https://ai.google.dev/gemini-api/docs",
+    "officialSignupUrl": "https://aistudio.google.com/apikey",
+    "description": "Google's official AI studio offering Gemini 2.0 Flash, Gemini 2.5 Flash, and Gemma 2 models with generous free quotas.",
+    "speedTokPerSec": 150,
+    "contextWindow": "1M tokens",
+    "isOfficialProvider": true,
+    "isAggregator": false
+  },
+  {
+    "id": "groq",
+    "name": "Groq",
+    "slug": "groq",
+    "logo": "/icons/groq.svg",
+    "logoAlt": "Groq LPU icon",
+    "models": [
+      "llama-3.3-70b",
+      "llama-3.1-8b",
+      "qwen-2.5-coder-32b",
+      "qwen-2.5-72b",
+      "mixtral-8x7b",
+      "gemma-2-9b"
+    ],
+    "modelCount": 6,
+    "requiresCreditCard": false,
+    "modalities": [
+      "Text",
+      "Code",
+      "Reasoning"
+    ],
+    "tier": "Permanent Free",
+    "tierClass": "Permanent Free",
+    "rateLimits": "30 RPM, 14,400 req/day",
+    "officialDocsUrl": "https://console.groq.com/docs",
+    "officialSignupUrl": "https://console.groq.com/keys",
+    "description": "Ultra-low latency inference via custom LPU chips. Fastest free tier at 330+ tok/s on Llama 3.3 70B.",
+    "speedTokPerSec": 330,
+    "contextWindow": "128K tokens",
+    "isOfficialProvider": true,
+    "isAggregator": false
+  },
+  {
+    "id": "sambanova",
+    "name": "SambaNova Systems",
+    "slug": "sambanova",
+    "logo": "/icons/sambanova.svg",
+    "logoAlt": "SambaNova RDU icon",
+    "models": [
+      "llama-3.3-70b",
+      "deepseek-r1",
+      "qwen-2.5-72b"
+    ],
+    "modelCount": 3,
+    "requiresCreditCard": false,
+    "modalities": [
+      "Text",
+      "Reasoning",
+      "Code"
+    ],
+    "tier": "Permanent Free",
+    "tierClass": "aggregator",
+    "rateLimits": "~20 RPM, 200 RPD daily quota",
+    "officialDocsUrl": "https://docs.sambanova.ai/",
+    "officialSignupUrl": "https://www.sambanova.ai/",
+    "description": "Reconfigurable dataflow unit (RDU) inference cloud. Sub-second latency on SN40L RDUs with daily free quota.",
+    "speedTokPerSec": 250,
+    "contextWindow": "128K tokens",
+    "isOfficialProvider": false,
+    "isAggregator": true
+  },
+  {
+    "id": "cerebras",
+    "name": "Cerebras",
+    "slug": "cerebras",
+    "logo": "/icons/cerebras.svg",
+    "logoAlt": "Cerebras wafer-scale icon",
+    "models": [
+      "llama-3.3-70b",
+      "llama-3.1-8b",
+      "llama-3.1-70b"
+    ],
+    "modelCount": 3,
+    "requiresCreditCard": false,
+    "modalities": [
+      "Text",
+      "Code",
+      "Reasoning"
+    ],
+    "tier": "Permanent Free",
+    "tierClass": "Permanent Free",
+    "rateLimits": "30 RPM, 1M tokens/day",
+    "officialDocsUrl": "https://docs.cerebras.ai/",
+    "officialSignupUrl": "https://cloud.cerebras.ai/",
+    "description": "Wafer-scale AI inference on custom CS-3 systems. Fastest free tier at 2,100+ tok/s on Llama 3.3 70B.",
+    "speedTokPerSec": 2100,
+    "contextWindow": "8K tokens",
+    "isOfficialProvider": true,
+    "isAggregator": false
+  },
+  {
+    "id": "nvidia-nim",
+    "name": "NVIDIA NIM",
+    "slug": "nvidia-nim",
+    "logo": "/icons/nvidia.svg",
+    "logoAlt": "NVIDIA NIM icon",
+    "models": [
+      "llama-3.3-70b",
+      "nemotron-nano",
+      "mistral-large",
+      "gemma-2-2b"
+    ],
+    "modelCount": 4,
+    "requiresCreditCard": false,
+    "modalities": [
+      "Text",
+      "Reasoning",
+      "Vision",
+      "Code"
+    ],
+    "tier": "Trial Credits",
+    "tierClass": "Trial Credits",
+    "rateLimits": "1,000 promotional API credits for developers",
+    "officialDocsUrl": "https://docs.nvidia.com/nim/",
+    "officialSignupUrl": "https://build.nvidia.com/",
+    "description": "NVIDIA inference microservices with 1,000 free promotional API credits. Enterprise-grade GPU-accelerated inference.",
+    "speedTokPerSec": 180,
+    "contextWindow": "128K tokens",
+    "isOfficialProvider": true,
+    "isAggregator": false
+  },
+  {
+    "id": "mistral-ai",
+    "name": "Mistral AI",
+    "slug": "mistral",
+    "logo": "/icons/mistral.svg",
+    "logoAlt": "Mistral AI icon",
+    "models": [
+      "mistral-nemo-12b",
+      "mistral-codestral",
+      "mistral-large"
+    ],
+    "modelCount": 3,
+    "requiresCreditCard": false,
+    "modalities": [
+      "Text",
+      "Reasoning",
+      "Code"
+    ],
+    "tier": "Quota Limits",
+    "tierClass": "Quota Limits",
+    "rateLimits": "1 RPS (60 RPM), phone verification required",
+    "officialDocsUrl": "https://docs.mistral.ai/platform/",
+    "officialSignupUrl": "https://platform.mistral.ai/",
+    "description": "European open-source LLM platform with MoE architecture. Free tier requires phone verification.",
+    "speedTokPerSec": 200,
+    "contextWindow": "128K tokens",
+    "isOfficialProvider": true,
+    "isAggregator": false
+  },
+  {
+    "id": "cloudflare-workers-ai",
+    "name": "Cloudflare Workers AI",
+    "slug": "cloudflare",
+    "logo": "/icons/cloudflare.svg",
+    "logoAlt": "Cloudflare Workers AI icon",
+    "models": [
+      "llama-3.3-70b",
+      "llama-3.1-8b",
+      "deepseek-r1",
+      "whisper-large-v3",
+      "bge-large-en"
+    ],
+    "modelCount": 5,
+    "requiresCreditCard": false,
+    "modalities": [
+      "Text",
+      "Reasoning",
+      "Vision",
+      "Audio",
+      "Embedding"
+    ],
+    "tier": "Permanent Free",
+    "tierClass": "Permanent Free",
+    "rateLimits": "10,000 neurons/day free allocation",
+    "officialDocsUrl": "https://developers.cloudflare.com/workers-ai/",
+    "officialSignupUrl": "https://dash.cloudflare.com/?to=/:account/workers-ai",
+    "description": "Edge AI inference on Cloudflare's global network. 10,000 neurons/day free for text, audio, vision, and embeddings.",
+    "speedTokPerSec": 80,
+    "contextWindow": "128K tokens",
+    "isOfficialProvider": true,
+    "isAggregator": false
+  },
+  {
+    "id": "openrouter",
+    "name": "OpenRouter",
+    "slug": "openrouter",
+    "logo": "/icons/openrouter.svg",
+    "logoAlt": "OpenRouter icon",
+    "models": [
+      "meta-llama/llama-3.3-70b:free",
+      "qwen/qwen2.5-72b:free",
+      "meta-llama/llama-3.1-8b:free",
+      "deepseek/deepseek-r1:free"
+    ],
+    "modelCount": 35,
+    "requiresCreditCard": false,
+    "modalities": [
+      "Text",
+      "Reasoning",
+      "Code",
+      "Vision"
+    ],
+    "tier": "Free Aggregator",
+    "tierClass": "aggregator",
+    "rateLimits": "3 RPM, no credit card required for :free models",
+    "officialDocsUrl": "https://openrouter.ai/docs",
+    "officialSignupUrl": "https://openrouter.ai/keys",
+    "description": "Multi-provider routing layer aggregating 35+ free model endpoints. :free models available with rate limits.",
+    "speedTokPerSec": 90,
+    "contextWindow": "164K tokens",
+    "isOfficialProvider": false,
+    "isAggregator": true
+  },
+  {
+    "id": "huggingface",
+    "name": "Hugging Face",
+    "slug": "huggingface",
+    "logo": "/icons/huggingface.svg",
+    "logoAlt": "Hugging Face icon",
+    "models": [
+      "meta-llama/Meta-Llama-3.1-8B-Instruct",
+      "meta-llama/Meta-Llama-3.3-70B-Instruct",
+      "mistralai/Mistral-7B-Instruct-v0.3"
+    ],
+    "modelCount": 3,
+    "requiresCreditCard": false,
+    "modalities": [
+      "Text",
+      "Code",
+      "Embedding"
+    ],
+    "tier": "Community Free",
+    "tierClass": "aggregator",
+    "rateLimits": "1,000 requests/day via Inference API (serverless)",
+    "officialDocsUrl": "https://huggingface.co/docs/huggingface.js/guides/inference",
+    "officialSignupUrl": "https://huggingface.co/settings/tokens",
+    "description": "Open-source model hub with serverless Inference API. 1,000 requests/day free on serverless endpoints.",
+    "speedTokPerSec": 30,
+    "contextWindow": "128K tokens",
+    "isOfficialProvider": false,
+    "isAggregator": true
+  },
+  {
+    "id": "github-models",
+    "name": "GitHub Models",
+    "slug": "github-models",
+    "logo": "/icons/github.svg",
+    "logoAlt": "GitHub Models icon",
+    "models": [
+      "gpt-4o-mini",
+      "llama-3-8b",
+      "llama-3.3-70b",
+      "phi-4",
+      "qwen-2.5-coder-32b"
+    ],
+    "modelCount": 5,
+    "requiresCreditCard": false,
+    "modalities": [
+      "Text",
+      "Code",
+      "Reasoning"
+    ],
+    "tier": "Trial Credits",
+    "tierClass": "Trial Credits",
+    "rateLimits": "GitHub account required; Copilot limits apply",
+    "officialDocsUrl": "https://docs.github.com/en/models",
+    "officialSignupUrl": "https://github.com/features",
+    "description": "Free AI models via GitHub Models with GitHub account. GPT-4o mini, Llama 3.3, Phi-4 available with Copilot rate limits.",
+    "speedTokPerSec": 60,
+    "contextWindow": "128K tokens",
+    "isOfficialProvider": true,
+    "isAggregator": false
+  },
+  {
+    "id": "kilo-code",
+    "name": "Kilo Code / Kilo Gateway",
+    "slug": "kilo-gateway",
+    "logo": "/icons/kilo.svg",
+    "logoAlt": "Kilo Gateway icon",
+    "models": [
+      "deepseek-r1",
+      "mistral-nemo-12b",
+      "qwen-2.5-72b",
+      "qwen-2.5-coder-32b",
+      "deepseek-coder"
+    ],
+    "modelCount": 5,
+    "requiresCreditCard": false,
+    "modalities": [
+      "Text",
+      "Reasoning",
+      "Code"
+    ],
+    "tier": "Free Aggregator",
+    "tierClass": "Free Aggregator",
+    "rateLimits": "Developer trial quota; varies by model",
+    "officialDocsUrl": "https://kilo.code/",
+    "officialSignupUrl": "https://kilo.code/",
+    "description": "Free AI model gateway routing to frontier models including Qwen 2.5 Coder, DeepSeek Coder, and MiMo V2.5 with zero-cost access.",
+    "speedTokPerSec": 150,
+    "contextWindow": "128K tokens",
+    "isOfficialProvider": true,
+    "isAggregator": false
+  },
+  {
+    "id": "chutes-ai",
+    "name": "Chutes.ai",
+    "slug": "chutes-ai",
+    "logo": "/icons/chutes.svg",
+    "logoAlt": "Chutes.ai icon",
+    "models": [
+      "deepseek-r1",
+      "llama-3.3-70b",
+      "qwen-2.5-72b"
+    ],
+    "modelCount": 3,
+    "requiresCreditCard": false,
+    "modalities": [
+      "Text",
+      "Reasoning",
+      "Code"
+    ],
+    "tier": "Community Free",
+    "tierClass": "aggregator",
+    "rateLimits": "Free tier with rate limits",
+    "officialDocsUrl": "https://docs.chutes.ai/",
+    "officialSignupUrl": "https://chutes.ai/",
+    "description": "Community-hosted inference with free tiers. Fast deployment for open-source LLMs with competitive rates.",
+    "speedTokPerSec": 100,
+    "contextWindow": "128K tokens",
+    "isOfficialProvider": false,
+    "isAggregator": true
+  },
+  {
+    "id": "modelscope",
+    "name": "ModelScope",
+    "slug": "modelscope",
+    "logo": "/icons/modelscope.svg",
+    "logoAlt": "ModelScope icon",
+    "models": [
+      "qwen-2.5-72b",
+      "llama-3-8b",
+      "mistral-7b"
+    ],
+    "modelCount": 3,
+    "requiresCreditCard": false,
+    "modalities": [
+      "Text",
+      "Code",
+      "Vision"
+    ],
+    "tier": "Community Free",
+    "tierClass": "aggregator",
+    "rateLimits": "Free tier with rate limits",
+    "officialDocsUrl": "https://modelscope.cn/",
+    "officialSignupUrl": "https://modelscope.cn/",
+    "description": "Chinese AI model hub with free inference endpoints for text, code, and vision models.",
+    "speedTokPerSec": 80,
+    "contextWindow": "128K tokens",
+    "isOfficialProvider": false,
+    "isAggregator": true
+  },
+  {
+    "id": "ovhcloud-ai",
+    "name": "OVHcloud AI Endpoints",
+    "slug": "ovhcloud-ai",
+    "logo": "/icons/ovhcloud.svg",
+    "logoAlt": "OVHcloud AI icon",
+    "models": [
+      "mistral-7b",
+      "llama-3-8b",
+      "qwen-2-1.5b"
+    ],
+    "modelCount": 3,
+    "requiresCreditCard": false,
+    "modalities": [
+      "Text",
+      "Code"
+    ],
+    "tier": "Community Free",
+    "tierClass": "aggregator",
+    "rateLimits": "Free tier with rate limits",
+    "officialDocsUrl": "https://docs.ovhcloud.com/en/public-cloud/ai-endpoints/",
+    "officialSignupUrl": "https://www.ovhcloud.com/public-cloud/ai-endpoints/",
+    "description": "European sovereign AI endpoints with free tier. GDPR-compliant inference on OVHcloud infrastructure.",
+    "speedTokPerSec": 50,
+    "contextWindow": "128K tokens",
+    "isOfficialProvider": false,
+    "isAggregator": true
+  }
+]

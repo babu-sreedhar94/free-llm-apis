@@ -1,0 +1,47 @@
+name: "Report outdated information"
+description: A row in the directory is wrong or stale (limit changed, model removed, link dead).
+labels: ["data-quality"]
+body:
+  - type: input
+    id: provider
+    attributes:
+      label: Provider
+      placeholder: e.g. Groq
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model (if provider-specific)
+      placeholder: e.g. Llama 3.3 70B
+  - type: input
+    id: field
+    attributes:
+      label: Field that is wrong
+      placeholder: e.g. rateLimits.documented, officialDocsUrl, model no longer listed
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current value in this dataset
+      description: Copy the value from data/directory.json (or the README row).
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official source URL showing the correct value
+      placeholder: https://…
+    validations:
+      required: true
+  - type: input
+    id: observed
+    attributes:
+      label: Date you observed the change (YYYY-MM-DD)
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else (screenshot links, announcement URLs)
