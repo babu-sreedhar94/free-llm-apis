@@ -24,7 +24,7 @@ Not every "free" label means the same thing. This directory separates them:
 
 **Free trial ≠ permanent free tier.** A trial burns down (a clock or a credit balance); a permanent tier renews (rate limits reset). A renewable quota sits in between: it renews, but a daily cap still binds. The `Category` column on every row tells you which one you're looking at — it is derived directly from each row's source value, not assigned by hand.
 
-**What this directory does not list:** offers that require a credit card to start, unverified marketing claims, or local/self-hosted models (no API account involved — see OpenGPU Radar's [local LLM guides](https://opengpuradar.com/learn/local-llm-serving-engines) for that). Geographic availability restrictions are **not tracked** in this dataset; check each provider's terms.
+**What this directory does not list:** offers that require a credit card to start, unverified marketing claims, or local/self-hosted models (no API account involved — see OpenGPU Radar's [local LLM guides](https://opengpuradar.com/learn/local-llm-serving-engines?utm_source=github&utm_medium=referral&utm_campaign=free-llm-apis) for that). Geographic availability restrictions are **not tracked** in this dataset; check each provider's terms.
 
 ## Directory at a glance
 
@@ -184,10 +184,12 @@ Get a key from the row's **Get an API key** link, then point any OpenAI SDK clie
 
 **More from OpenGPU Radar** (the project that maintains this dataset):
 
-- [Live directory](https://opengpuradar.com/free-llm-apis) — the same data, browsable
-- [Playground](https://opengpuradar.com/playground) — try models with your own key, no signup here
-- [VRAM / GPU calculator](https://opengpuradar.com/calculator) — can your hardware run a model locally?
-- [GPU comparison hub](https://opengpuradar.com/compare) — renting instead of free-tiering?
+- [Live directory](https://opengpuradar.com/free-llm-apis?utm_source=github&utm_medium=referral&utm_campaign=free-llm-apis) — the same data, browsable
+- [Free LLM hub](https://opengpuradar.com/free-llm?utm_source=github&utm_medium=referral&utm_campaign=free-llm-apis) — verification radar and live provider status for the whole cluster
+- [No-credit-card setup guide](https://opengpuradar.com/learn/free-llm-apis-guide?utm_source=github&utm_medium=referral&utm_campaign=free-llm-apis) — step-by-step tutorial for getting started
+- [Playground](https://opengpuradar.com/playground?utm_source=github&utm_medium=referral&utm_campaign=free-llm-apis) — try models with your own key, no signup here
+- [VRAM / GPU calculator](https://opengpuradar.com/calculator?utm_source=github&utm_medium=referral&utm_campaign=free-llm-apis) — can your hardware run a model locally?
+- [GPU comparison hub](https://opengpuradar.com/compare?utm_source=github&utm_medium=referral&utm_campaign=free-llm-apis) — renting instead of free-tiering?
 
 ## Report outdated information
 
@@ -214,4 +216,4 @@ Maintainers refresh the snapshots with `node scripts/generate.mjs --from <opengp
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Attribution is appreciated; the upstream dataset is maintained by [OpenGPU Radar](https://opengpuradar.com).
+MIT — see [LICENSE](LICENSE). Attribution is appreciated; the upstream dataset is maintained by [OpenGPU Radar](https://opengpuradar.com?utm_source=github&utm_medium=referral&utm_campaign=free-llm-apis).
