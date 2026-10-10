@@ -2,6 +2,15 @@
 
 A machine-readable directory of **free LLM API access**: which providers offer free models, on what terms, with which rate limits — and when each claim was last verified. Every row is generated from OpenGPU Radar's verified dataset; nothing in the tables below is hand-maintained.
 
+## 🔎 Explore on OpenGPU Radar
+
+**▶ [Live free LLM API directory](https://opengpuradar.com/free-llm-apis?utm_source=github&utm_medium=referral&utm_campaign=free-llm-apis&utm_content=readme_top)** — the same verified dataset, browsable: filter by provider, compare requirements, rate limits, and each row's verification date.
+
+More from the site:
+
+- [GPU pricing](https://opengpuradar.com/cheapest-gpus?utm_source=github&utm_medium=referral&utm_campaign=free-llm-apis&utm_content=readme_top) — tracked per-hour rates for cloud GPUs
+- [VRAM calculator](https://opengpuradar.com/calculator?utm_source=github&utm_medium=referral&utm_campaign=free-llm-apis&utm_content=readme_top) — can your hardware run a model locally?
+
 - **Browsing?** Start with [Providers](#providers) or [Model offerings](#model-offerings).
 - **Integrating?** Grab a row's official key link, then use the provider's OpenAI-compatible endpoint.
 - **Data?** Everything is in [`data/directory.json`](data/directory.json) (derived) and its two source snapshots in [`data/`](data/).
